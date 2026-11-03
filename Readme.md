@@ -1,4 +1,4 @@
-# 🎓 [Course / Repository Name]
+# 🎓 Programming & Algorithms 1 C/C++ codes
 
 > C++ programs developed for the **Software Engineering Master's** at **CIMAT**.
 
