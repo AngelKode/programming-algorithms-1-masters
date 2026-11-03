@@ -25,9 +25,10 @@
 
 ## 🧾 Program Index
 
-| #  | Program          | Description                    | Status         |
-|----|------------------|--------------------------------|----------------|
-| 01 | Examen Parcial 1 | Implementing LU descomposition | ✅ Done         |
+| #  | Program          | Description                      | Status  |
+|----|------------------|----------------------------------|---------|
+| 01 | Examen Parcial 1 | Implementing LU descomposition   | ✅ Done |
+| 02 | Recursividad     | Implementing recursive algorithms | 🚧 In progress         |
 <!--✅ Done -->
 <!--🚧 In progress -->
 <!--⏳ Pending  -->
