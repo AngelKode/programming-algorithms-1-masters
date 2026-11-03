@@ -1,6 +1,6 @@
 # 🎓 Programming & Algorithms 1 C/C++ codes
 
-> C++ programs developed for the **Software Engineering Master's** at **CIMAT**.
+> C++ programs from basics to file management.
 
 ![C++](https://img.shields.io/badge/C%2B%2B-98-blue?logo=cplusplus)
 ![Build](https://img.shields.io/badge/build-CMake-informational)
