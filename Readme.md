@@ -16,7 +16,6 @@
 │   ├── program-01/ (example, not real name)
 │   └── program-02/
 ├── tests/              # Unit tests
-├── docs/               # Reports, diagrams, notes
 ├── CMakeLists.txt      # Build configuration
 ├── .gitignore
 └── README.md
