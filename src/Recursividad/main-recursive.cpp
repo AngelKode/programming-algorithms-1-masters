@@ -4,15 +4,17 @@ int calculatePositiveSum(int n);
 int calculateFactorial(int n);
 int calculatePotenceSum(int base, int potency);
 int calculateSumOfDigits(int n);
+int hanoi(int nDiscos, char origen, char aux, char destiny);
 
 int main() {
+
     //--------------------------------------Problema 1--------------------------------------
     int limit = 0;
     printf("-----------------------PROGRAMA 1-----------------------");
     printf("\nIngresa el numero limite: ");
     scanf("%d", &limit);
 
-    int sumOfNumberSequence = calculatePositiveSum(10);
+    int sumOfNumberSequence = calculatePositiveSum(limit);
     printf("El resultado de sumar todos los numeros de 1 a %d es: %d", limit, sumOfNumberSequence);
     printf("\n-----------------------PROGRAMA 1-----------------------");
     //--------------------------------------Problema 1--------------------------------------
@@ -50,6 +52,14 @@ int main() {
     printf("El resultado de sumar los digitos de %d es: %d", numberToCalculateItDigitsSum, resultDigitSum);
     printf("\n-----------------------PROGRAMA 4-----------------------");
     //--------------------------------------Problema 4--------------------------------------
+
+    //--------------------------------------Problema Hanoi--------------------------------------
+    int hanoiDiscNum = 1;
+    printf("\n\n-----------------------PROGRAMA HANOI-----------------------");
+    printf("\nIngrese el numero de discos para resolver hanoi: ");
+    scanf("%d", &hanoiDiscNum);
+    printf("%d\n", hanoi(hanoiDiscNum, 'A', 'B', 'C'));
+    //--------------------------------------Problema Hanoi--------------------------------------
 }
 
 int calculatePositiveSum(int n) {
@@ -85,4 +95,27 @@ int calculateSumOfDigits(int n) {
     }
 
     return (n % 10) + calculateSumOfDigits(n / 10);
+}
+
+int hanoi(int nDiscos, char origen, char aux, char destiny){
+    int sumaTotalMovimientos = 0;
+    if (nDiscos == 1) {
+        //Si solamente hay 1 disco, se lleva directamente de el origen al destino
+        printf("Moviendo un disco desde %c a %c\n", origen, destiny);
+        return 1;
+    }
+
+    //Si son 2 o mas discos, lo dividimos en pequeños pasos
+
+    //Primero movemos la cantidad de discos - 1 del origen al pilar auxiliar
+    sumaTotalMovimientos += hanoi(nDiscos - 1, origen, destiny, aux);
+
+    //Movemos el elemento que dejamos faltante al origen al destino (el disco ultimo y mas grande)
+    printf("Moviendo un disco desde %c a %c\n",origen, destiny);
+    sumaTotalMovimientos += 1;
+
+    //Hasta este punto ya solo falta mover los que se quedaron en el auxiliar al destino
+    sumaTotalMovimientos += hanoi(nDiscos - 1, aux, origen, destiny);
+
+    return sumaTotalMovimientos;
 }
